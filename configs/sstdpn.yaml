@@ -1,0 +1,48 @@
+model: sstdpn
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        f1: 9, f2: 48, time_kernel_length: 75, pool_kernels: [ 50, 100, 200 ]
+      }
+      pl_weight: 0.001
+      norm_weight: 0.0001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        f1: 9, f2: 48, time_kernel_length: 75, pool_kernels: [ 50, 100, 200 ]
+      }
+      pl_weight: 0.001
+      norm_weight: 0.0001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        f1: 9, f2: 48, time_kernel_length: 50, pool_kernels: [ 50, 100, 150 ]
+      }
+      pl_weight: 0.01
+      norm_weight: 0.0001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        f1: 9, f2: 48, time_kernel_length: 75, pool_kernels: [ 50, 100, 200 ]
+      }
+      pl_weight: 0.001
+      norm_weight: 0.0001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }

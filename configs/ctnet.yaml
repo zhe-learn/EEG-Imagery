@@ -1,0 +1,44 @@
+model: ctnet
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        n_heads: 4, d_model: 40, depth: 6, f1: 20, kernel_size: 64, depth_multiplier: 2, pooling_size1: 8,
+        pooling_size2: 8, dropout: 0.3
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        n_heads: 4, d_model: 40, depth: 6, f1: 20, kernel_size: 64, depth_multiplier: 2, pooling_size1: 8,
+        pooling_size2: 8, dropout: 0.3
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        n_heads: 4, d_model: 40, depth: 6, f1: 20, kernel_size: 64, depth_multiplier: 2, pooling_size1: 8,
+        pooling_size2: 8, dropout: 0.3
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        n_heads: 4, d_model: 40, depth: 6, f1: 20, kernel_size: 64, depth_multiplier: 2, pooling_size1: 8,
+        pooling_size2: 8, dropout: 0.3
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }

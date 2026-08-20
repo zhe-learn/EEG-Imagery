@@ -1,0 +1,52 @@
+model: model_mine
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        f1: 16, depth_multiplier: 2, f2: 32, temp_conv_kernel_size: 64, pool_size1: 8, pool_size2: 8,
+        pool_stride1: 8, pool_stride2: 8, dropout: 0.3, n_kernels: 4, n_repeats: 1, top_k: 2,
+      }
+      alpha: 0.01
+      beta: 0.001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        f1: 16, depth_multiplier: 2, f2: 32, temp_conv_kernel_size: 64, pool_size1: 8, pool_size2: 8,
+        pool_stride1: 8, pool_stride2: 8, dropout: 0.3, n_kernels: 4, n_repeats: 1, top_k: 2,
+      }
+      alpha: 0.01
+      beta: 0.001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        f1: 16, depth_multiplier: 2, f2: 32, temp_conv_kernel_size: 16, pool_size1: 64, pool_size2: 2,
+        pool_stride1: 8, pool_stride2: 2, dropout: 0.3, n_kernels: 4, n_repeats: 1, top_k: 2,
+      }
+      alpha: 0.1
+      beta: 0.001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        f1: 16, depth_multiplier: 2, f2: 32, temp_conv_kernel_size: 64, pool_size1: 8, pool_size2: 8,
+        pool_stride1: 8, pool_stride2: 8,dropout: 0.3, n_kernels: 4, n_repeats: 1, top_k: 2,
+      }
+      alpha: 0.01
+      beta: 0.001
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }

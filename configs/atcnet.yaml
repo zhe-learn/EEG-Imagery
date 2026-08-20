@@ -1,0 +1,48 @@
+model: atcnet
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        f1: 16, conv_kernel_size: 64, pool_size: 8, depth_multiplier: 2, dropout_conv: 0.3, d_model: 32,
+        key_dim: 8, n_heads: 2, dropout_attn: 0.5, tcn_depth: 2, tcn_kernel_size: 4, dropout_tcn: 0.3,
+        n_windows: 5
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        f1: 16, conv_kernel_size: 64, pool_size: 8, depth_multiplier: 2, dropout_conv: 0.3, d_model: 32,
+        key_dim: 8, n_heads: 2, dropout_attn: 0.5, tcn_depth: 2, tcn_kernel_size: 4, dropout_tcn: 0.3,
+        n_windows: 5
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        f1: 16, conv_kernel_size: 64, pool_size: 8, depth_multiplier: 2, dropout_conv: 0.3, d_model: 32,
+        key_dim: 8, n_heads: 2, dropout_attn: 0.5, tcn_depth: 2, tcn_kernel_size: 4, dropout_tcn: 0.3,
+        n_windows: 5
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        f1: 16, conv_kernel_size: 64, pool_size: 8, depth_multiplier: 2, dropout_conv: 0.3, d_model: 32,
+        key_dim: 8, n_heads: 2, dropout_attn: 0.5, tcn_depth: 2, tcn_kernel_size: 4, dropout_tcn: 0.3,
+        n_windows: 5
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }

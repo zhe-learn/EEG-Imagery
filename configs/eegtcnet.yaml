@@ -1,0 +1,44 @@
+model: eegtcnet
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        layers: 2, tcn_kernel_size: 4, tcn_filters: 12, tcn_dropout: 0.3, f1: 8, depth_multiplier: 2,
+        kernel_length: 32, eeg_dropout: 0.2
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        layers: 2, tcn_kernel_size: 4, tcn_filters: 12, tcn_dropout: 0.3, f1: 8, depth_multiplier: 2,
+        kernel_length: 32, eeg_dropout: 0.2
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        layers: 2, tcn_kernel_size: 4, tcn_filters: 12, tcn_dropout: 0.3, f1: 8, depth_multiplier: 2,
+        kernel_length: 32, eeg_dropout: 0.2
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        layers: 2, tcn_kernel_size: 4, tcn_filters: 12, tcn_dropout: 0.3, f1: 8, depth_multiplier: 2,
+        kernel_length: 32, eeg_dropout: 0.2
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }

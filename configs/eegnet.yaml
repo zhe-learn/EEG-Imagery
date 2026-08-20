@@ -1,0 +1,40 @@
+model: eegnet
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        f1: 8, depth_multiplier: 2, f2: 16, kernel_length: 64, dropout: 0.5, kernel_length_dw_sep: 16
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        f1: 8, depth_multiplier: 2, f2: 16, kernel_length: 64, dropout: 0.5, kernel_length_dw_sep: 16
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        f1: 8, depth_multiplier: 2, f2: 16, kernel_length: 64, dropout: 0.5, kernel_length_dw_sep: 16
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        f1: 8, depth_multiplier: 2, f2: 16, kernel_length: 64, dropout: 0.5, kernel_length_dw_sep: 16
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }

@@ -1,0 +1,40 @@
+model: lmdanet
+train:
+  datasets:
+    bcic_iv_2a:
+      arch: {
+        depth: 9, kernel_size: 75, channel_depth1: 24, channel_depth2: 9, avg_pool_size: 25
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iv_2b:
+      arch: {
+        depth: 9, kernel_size: 75, channel_depth1: 24, channel_depth2: 9, avg_pool_size: 25
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    bcic_iii_4a:
+      arch: {
+        depth: 9, kernel_size: 75, channel_depth1: 24, channel_depth2: 9, avg_pool_size: 25
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
+      cross: {
+        stage1_epochs: 30, stage2_epochs: 20, batch_size: 64, lr: 0.002
+      }
+    wbcic_shu:
+      arch: {
+        depth: 9, kernel_size: 75, channel_depth1: 24, channel_depth2: 9, avg_pool_size: 25
+      }
+      within: {
+        stage1_epochs: 200, stage2_epochs: 100, batch_size: 64, lr: 0.002
+      }
